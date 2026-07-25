@@ -1,0 +1,135 @@
+[
+  {
+    "id": "sd-p001",
+    "title": "The Imperial Haven - Colombo 07",
+    "category": "Houses",
+    "price": 285000000,
+    "priceFormatted": "LKR 285,000,000",
+    "location": "Cinnamon Gardens, Colombo 07",
+    "beds": 5,
+    "baths": 6,
+    "sqft": 6800,
+    "landSize": "22.5 Perches",
+    "stockStatus": "In Stock - Exclusive Listing",
+    "description": "An architectural masterpiece in Colombo's most prestigious neighborhood. Features a private infinity lap pool, double-height ceiling grand living room, teak wood finishings, fully equipped Italian kitchen, state-of-the-art smart home automation, and 24/7 private security.",
+    "images": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "features": [
+      "Private Lap Pool",
+      "Smart Home Automation",
+      "Solar Power System",
+      "4-Car Covered Garage",
+      "Separate Maid's Quarters",
+      "Bim Saviya Clear Title"
+    ]
+  },
+  {
+    "id": "sd-p002",
+    "title": "Emerald Hillside Sanctuary - Kandy",
+    "category": "Villas",
+    "price": 145000000,
+    "priceFormatted": "LKR 145,000,000",
+    "location": "Aniwatte, Kandy",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 4500,
+    "landSize": "35 Perches",
+    "stockStatus": "In Stock - Hot Deal",
+    "description": "Perched on the scenic mountainside of Aniwatte with breathtaking panoramic views of the Mahaweli River and Kandy mountain ranges. Complete with infinity view deck, glass balconies, climate control, and lush manicured tea gardens.",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "features": [
+      "Panoramic Mountain Views",
+      "Infinity Terrace Deck",
+      "Lush Organic Gardens",
+      "Dual Water Backup Systems",
+      "CCTV & Security Alarm",
+      "Solar Water Heating"
+    ]
+  },
+  {
+    "id": "sd-p003",
+    "title": "Oceanfront Luxury Prime Land - Galle",
+    "category": "Lands",
+    "price": 98000000,
+    "priceFormatted": "LKR 98,000,000",
+    "location": "Thalpe, Galle Coast",
+    "beds": 0,
+    "baths": 0,
+    "sqft": 0,
+    "landSize": "48 Perches",
+    "stockStatus": "In Stock - Prime Coastal Plot",
+    "description": "Extremely rare beachfront plot along the golden coast of Thalpe, Galle. Ideal for constructing a world-class luxury boutique hotel, private oceanfront villa, or commercial luxury resort. Features 80 feet of direct ocean frontage.",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "features": [
+      "Direct Beach Frontage",
+      "Sinnakkara Clear Title",
+      "Main Coast Road Access",
+      "3-Phase Electricity Onsite",
+      "Water Line Connected",
+      "Approved Resort Zone"
+    ]
+  },
+  {
+    "id": "sd-p004",
+    "title": "Royal Palm Residency - Korathota",
+    "category": "Houses",
+    "price": 72000000,
+    "priceFormatted": "LKR 72,000,000",
+    "location": "Korathota, Kaduwela (10640)",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 3400,
+    "landSize": "18.5 Perches",
+    "stockStatus": "In Stock - Newly Built",
+    "description": "A sophisticated, brand new modern luxury house situated in Korathota close to the Kaduwela highway entrance. Features minimalist open-plan living, rooftop sun deck, landscaped courtyard garden, and high-end mahogany woodwork.",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "features": [
+      "Rooftop Sky Lounge",
+      "Minutes to Highway Interchange",
+      "Roller Gate Shutter & Perimeter Wall",
+      "Hot Water Plumbing",
+      "Landscaped Courtyard"
+    ]
+  },
+  {
+    "id": "sd-p005",
+    "title": "Diyawanna Lake Front Estate Land - Rajagiriya",
+    "category": "Lands",
+    "price": 120000000,
+    "priceFormatted": "LKR 120,000,000",
+    "location": "Diyawanna Lake Front, Rajagiriya",
+    "beds": 0,
+    "baths": 0,
+    "sqft": 0,
+    "landSize": "28 Perches",
+    "stockStatus": "In Stock - High ROI Investment",
+    "description": "Exclusive lake-front land facing the serene Diyawanna Oya wetlands in Rajagiriya. Exceptional location with high appreciation potential, high elevation, clean soil test report, and quick access to Parliament Road and Central Colombo.",
+    "images": [
+      "https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "features": [
+      "Diyawanna Lake View",
+      "Clear Deed Title",
+      "Wide 30ft Access Road",
+      "High Elevation - Flood Free",
+      "Urban Development Approval"
+    ]
+  }
+]

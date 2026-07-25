@@ -1,0 +1,6 @@
+{
+  "name": "SD Property.lk - Luxury Real Estate",
+  "description": "Exclusive luxury houses, lands, and villas in Sri Lanka. SD Property.lk offers premium real estate listings with direct WhatsApp inquiry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
