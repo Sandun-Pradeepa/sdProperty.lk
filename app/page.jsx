@@ -23,11 +23,75 @@ import {
 } from "lucide-react";
 import initialProducts from "../data/products.json";
 
+const heroImages = [
+  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85",
+  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85",
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2000&q=85",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=85"
+];
+
+const ImageSlider = ({ images, title }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (!images || images.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images]);
+
+  return (
+    <div className="relative w-full h-full group/slider overflow-hidden bg-gray-900">
+      <AnimatePresence>
+        <motion.img
+          key={currentIndex}
+          src={images[currentIndex]}
+          alt={title}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8 }}
+          className="absolute inset-0 w-full h-full object-cover group-hover/slider:scale-105 transition-transform duration-700"
+        />
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f17] via-transparent to-black/30 z-10 pointer-events-none" />
+
+      {/* Dots */}
+      {images.length > 1 && (
+        <div className="absolute bottom-4 right-4 flex justify-center gap-1.5 z-20">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setCurrentIndex(idx);
+              }}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                idx === currentIndex ? "bg-[#d4af37] w-4" : "bg-white/50 hover:bg-white/90 w-1.5"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 export default function HomePage() {
   const [products, setProducts] = useState(initialProducts);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [quantities, setQuantities] = useState({});
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     // Initialize quantity state for each product
@@ -71,12 +135,19 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Dark Luxury House Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85"
-            alt="Luxury Real Estate Background"
-            className="w-full h-full object-cover object-center filter brightness-[0.35] scale-105 transform animate-pulse duration-[10000ms]"
-          />
+        <div className="absolute inset-0 z-0 bg-[#0b0f17]">
+          <AnimatePresence>
+            <motion.img
+              key={currentHeroImage}
+              src={heroImages[currentHeroImage]}
+              alt="Luxury Real Estate Background"
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+              className="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.35]"
+            />
+          </AnimatePresence>
           <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f17] via-[#0b0f17]/70 to-[#0b0f17]/40" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none" />
         </div>
@@ -188,11 +259,10 @@ export default function HomePage() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-5 py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                  selectedCategory === cat
+                className={`px-5 py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all duration-300 cursor-pointer ${selectedCategory === cat
                     ? "bg-gradient-to-r from-[#d4af37] to-[#aa820a] text-black shadow-lg font-bold"
                     : "bg-[#0b0f17] text-gray-300 hover:text-white border border-gray-800"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -249,12 +319,7 @@ export default function HomePage() {
                   {/* Top Image & Details */}
                   <div>
                     <div className="relative aspect-[16/10] overflow-hidden bg-gray-900">
-                      <img
-                        src={product.images[0]}
-                        alt={product.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f17] via-transparent to-black/20" />
+                      <ImageSlider images={product.images} title={product.title} />
 
                       <div className="absolute top-3 left-3 bg-[#0b0f17]/80 backdrop-blur-md border border-[#d4af37]/40 text-[#f3e5ab] text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full">
                         {product.category}
@@ -330,7 +395,7 @@ export default function HomePage() {
 
                   {/* Quantity & WhatsApp Action Buttons */}
                   <div className="p-5 pt-0 space-y-3">
-                    {/* Quantity Control */}
+                    {/* Quantity Control 
                     <div className="flex items-center justify-between bg-[#0b0f17] p-2 rounded-xl border border-[#d4af37]/20">
                       <span className="text-[11px] text-gray-400 font-medium pl-2 uppercase tracking-wider">
                         Inquiry Units / Qty:
@@ -353,7 +418,7 @@ export default function HomePage() {
                           <Plus className="w-3.5 h-3.5" />
                         </button>
                       </div>
-                    </div>
+                    </div>*/}
 
                     {/* Action Buttons */}
                     <div className="grid grid-cols-2 gap-2">
